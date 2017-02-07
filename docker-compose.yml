@@ -1,0 +1,21 @@
+version: '2'
+services:
+  geo.micro:
+    container_name: geo.micro
+#    extends:
+#      file: docker-compose.dist.yml
+#      service: template
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:81"
+#    networks:
+#      - weave
+#    volumes:
+#      - .:/opt/overmind:Z
+#    network_mode: "bridge"
+#networks:
+#  weave:
+#    external:
+#      name: weave
